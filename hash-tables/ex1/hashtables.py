@@ -39,6 +39,7 @@ def hash_table_insert(hash_table, key, value):
     current_pair = hash_table.storage[index]
     last_pair = None
 
+    # move to the end of the linked list
     while current_pair is not None and current_pair.key != key:
         last_pair = current_pair
         current_pair = last_pair.next
@@ -90,7 +91,7 @@ def hash_table_retrieve(hash_table, key):
             return current_pair.value
         current_pair = current_pair.next
 
-
+    return None
 # '''
 # Fill this in
 # '''
